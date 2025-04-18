@@ -1,0 +1,17 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "joyce:ultrasonic-dimled",
+  "visibility": "public",
+  "url": "",
+  "description": "Modular generic service: ultrasonic-dimLED",
+  "models": [
+    {
+      "api": "rdk:service:generic",
+      "model": "joyce:ultrasonic-dimled:ultrasonic-dimLED",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-joyceultrasonic-dimledultrasonic-dimled"
+    }
+  ],
+  "entrypoint": "./run.sh",
+  "first_run": ""
+}

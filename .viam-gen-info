@@ -1,0 +1,12 @@
+{
+  "module_name": "ultrasonic-dimled",
+  "namespace": "joyce",
+  "language": "python",
+  "resource_type": "service",
+  "resource_subtype": "generic",
+  "model_name": "ultrasonic-dimLED",
+  "enable_cloud_build": false,
+  "initialize_git": false,
+  "generator_version": "0.1.0",
+  "generated_on": "2025-04-16T16:33:16.873387Z"
+}
