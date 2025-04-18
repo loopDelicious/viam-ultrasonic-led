@@ -1,18 +1,23 @@
-# Module ultrasonic-dimled 
+# Module ultrasonic-dimled
 
-Provide a description of the purpose of the module and any relevant information.
+Parking assistant with a basic LED and ultrasonic sensor
 
 ## Model joyce:ultrasonic-dimled:ultrasonic-dimLED
 
-Provide a description of the model and any relevant information.
+Connect a PWM-capable LED (with resistor) to an ultrasonic sensor to increase brightness as an object gets closer, and blink when it's within a specific range
 
 ### Configuration
+
 The following attribute template can be used to configure this model:
 
 ```json
 {
-"attribute_1": <float>,
-"attribute_2": <string>
+  "auto_start": <boolean>,
+  "board": <string>,
+  "sensor": <string>,
+  "led_pin": <string>,
+  "max_distance": <float>,
+  "blinking_distance": <float>
 }
 ```
 
@@ -20,31 +25,44 @@ The following attribute template can be used to configure this model:
 
 The following attributes are available for this model:
 
-| Name          | Type   | Inclusion | Description                |
-|---------------|--------|-----------|----------------------------|
-| `attribute_1` | float  | Required  | Description of attribute 1 |
-| `attribute_2` | string | Optional  | Description of attribute 2 |
+| Name                | Type    | Inclusion | Description                                                |
+| ------------------- | ------- | --------- | ---------------------------------------------------------- |
+| `auto_start`        | boolean | Required  | Starts the control loop                                    |
+| `board`             | string  | Required  | Name of the Raspberry Pi board as found in the Viam app    |
+| `sensor`            | string  | Required  | Name of the ultrasonic sensor as found in the Viam app     |
+| `led_pin`           | string  | Required  | Number of the physical pin connected to the LED            |
+| `max_distance`      | float   | Optional  | Max distance from sensor to detect objects (in meters)     |
+| `blinking_distance` | float   | Optional  | Distance from snesor to begin blinking rapidly (in meters) |
 
 #### Example Configuration
 
 ```json
 {
-  "attribute_1": 1.0,
-  "attribute_2": "foo"
+  "auto_start": true,
+  "board": "board-1",
+  "sensor": "ultra-adafruit",
+  "led_pin": "11",
+  "max_distance": 1,
+  "blinking_distance": 0.2
 }
 ```
 
 ### DoCommand
 
-If your model implements DoCommand, provide an example payload of each command that is supported and the arguments that can be used. If your model does not implement DoCommand, remove this section.
+You can start the control loop with `start` or `stop`, or test the LED by sending a flash command with `test`.
 
 #### Example DoCommand
 
 ```json
 {
-  "command_name": {
-    "arg1": "foo",
-    "arg2": 1
-  }
+  "start": true
+}
+
+{
+  "stop": true
+}
+
+{
+  "test": true
 }
 ```

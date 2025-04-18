@@ -2,13 +2,13 @@
   "$schema": "https://dl.viam.dev/module.schema.json",
   "module_id": "joyce:ultrasonic-dimled",
   "visibility": "public",
-  "url": "",
+  "url": "https://github.com/loopDelicious/viam-ultrasonic-led",
   "description": "Modular generic service: ultrasonic-dimLED",
   "models": [
     {
       "api": "rdk:service:generic",
       "model": "joyce:ultrasonic-dimled:ultrasonic-dimLED",
-      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "short_description": "Connect an LED to an ultrasonic sensor to increase brightness as an object gets closer, and blink when it's within a specific range",
       "markdown_link": "README.md#model-joyceultrasonic-dimledultrasonic-dimled"
     }
   ],
