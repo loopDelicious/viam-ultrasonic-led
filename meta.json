@@ -8,7 +8,7 @@
     {
       "api": "rdk:service:generic",
       "model": "joyce:ultrasonic-dimled:ultrasonic-dimLED",
-      "short_description": "Connect an LED to an ultrasonic sensor to increase brightness as an object gets closer, and blink when it's within a specific range",
+      "short_description": "Parking assistant with ultrasonic sensor and LED",
       "markdown_link": "README.md#model-joyceultrasonic-dimledultrasonic-dimled"
     }
   ],
